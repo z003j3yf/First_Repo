@@ -1,18 +1,20 @@
 stages:
-  - hello
-  - goodbye
+- hello
+- goodbye
 
 job1:
   stage: hello
   script:
-    - echo "Hello. This is the first Job."
+  - echo "Hello. This is the first Job."
 
 job2:
   stage: goodbye
   script:
-    - echo "This is goodbye"
+  - echo "This is goodbye"
 
 job3:
   stage: goodbye
   script:
-    - echo "This is goodbye again"
+  - echo "This is goodbye again"
+
+
