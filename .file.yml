@@ -1,20 +1,14 @@
-stages:
-- hello
-- goodbye
+trigger:
+- main
 
-job1:
-  stage: hello
-  script:
-  - echo "Hello. This is the first Job."
+pool:
+  vmImage: ubuntu-latest
 
-job2:
-  stage: goodbye
-  script:
-  - echo "This is goodbye"
+steps:
+- script: echo "Hello World!"
+  displayName: 'First script'
 
-job3:
-  stage: goodbye
-  script:
-  - echo "This is goodbye again"
-
-
+- script: |
+    echo "Add other tasks..."
+    echo "Like this one..."
+  displayName: 'Second Script'
