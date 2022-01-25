@@ -10,5 +10,5 @@ steps:
 
 - script: |
     echo "Add other tasks..."
-    echo "Like this one..."
+    echo "This is the second local commit"
   displayName: 'Second Script'
