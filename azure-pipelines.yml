@@ -1,26 +1,10 @@
-trigger:
-- main
+stages:
+- stage: A
+  jobs:
+  - job: A1
+  - job: A2
 
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- script: echo "Hello World!"
-  displayName: 'First script'
-
-- script: |
-    echo "Add other tasks..."
-    echo "This is the second local commit"
-  displayName: 'Second Script'
-
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- script: echo "Hello World!"
-  displayName: 'First script'
-
-- script: |
-    echo "Add other tasks..."
-    echo "This is the second local commit"
-  displayName: 'Second Script'
+- stage: B
+  jobs:
+  - job: B1
+  - job: B2
